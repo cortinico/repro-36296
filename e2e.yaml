@@ -1,0 +1,5 @@
+appId: ${APP_ID} 
+---
+- launchApp
+- tapOn: "MOUNT"
+- assertVisible: Animated on the JS thread
