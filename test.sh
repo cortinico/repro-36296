@@ -13,13 +13,14 @@ for appId in "${versions[@]}"
 do
   echo "Testing $appId"
   flashlight test --bundleId $appId \
-   --iterationCount 3 \
    --testCommand "maestro --device $deviceId test -e APP_ID=$appId e2e.yaml" \
+   --iterationCount 10 \
    --duration 11000 \
    --resultsTitle $appId \
    --resultsFilePath $appId.json
 
    adb -s $deviceId shell am force-stop $appId
+   adb -s $deviceId shell pm clear $appId
    sleep 0.2
 done
 
