@@ -1,5 +1,9 @@
+# Reproducer for [#36296](https://github.com/facebook/react-native/issues/36296)
 
-# Run Automated Tests
+This is a reproducer for [react-native#36296](https://github.com/facebook/react-native/issues/36296).
+It contains several apps with both Hermes and JSC to run benchmarks and find regressions.
+
+## Run Automated Tests
 
 We use Flashlight and Maestro to quickly run tests against an Android device and
 retrieve performance metrics such as FPS, CPU usage, and memory.
